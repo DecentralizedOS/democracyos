@@ -8,12 +8,10 @@ Define `Post` schema
 const Post = new mongoose.Schema({
   title: String,
   content: String,
-  reactionId: String,
   author: String,
   openingDate: { type: Date },
-  closingDate: { type: Date },
-  tags: [String]
-})
+  closingDate: { type: Date }
+}, { timestamps: true })
 
 /**
  * Model's Plugin Extensions
