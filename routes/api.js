@@ -16,6 +16,7 @@ router.use(
 
 // API routes
 router.use('/users', require('../users/api/users'))
+router.user('/posts', require('../cms/api/posts'))
 
 // Catch 404 and forward to error handler.
 router.use((req, res, next) => {
