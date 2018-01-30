@@ -6,9 +6,10 @@ Define `Post` schema
 */
 
 const Post = new mongoose.Schema({
-  title: String,
-  content: String,
-  author: String,
+  title: { type: String, maxLength: 225, required: true },
+  description: { type: String, maxLength: 120 }
+  content: { type: String, required: true },
+  author: { type: String },
   openingDate: { type: Date },
   closingDate: { type: Date }
 }, { timestamps: true })

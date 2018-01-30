@@ -58,7 +58,7 @@ router.route('/:id')
   // UPDATE a post with a given ID
   .put(async (req, res, next) => {
     try {
-      await Post.update({ id: req.params.id, user: req.body })
+      await Post.update({ id: req.params.id, post: req.body })
       res.status(NO_CONTENT).end()
     } catch (err) {
       log.error(err)
