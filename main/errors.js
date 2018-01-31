@@ -27,19 +27,19 @@ const ErrNotFound = new APIError('not found', {
   status: NOT_FOUND
 })
 
-const ErrInvalidParams = new APIError('Invalid paramethers', {
-  translation_key: 'INVALID_PARAMS',
+const ErrMissingParam = new APIError('Missing required paramether', {
+  translation_key: 'MISSING_PARAM',
   status: 400
 })
 
-const ErrParamsTooLong = new APIError('Paramethers are too long', {
-  translation_key: 'PARAMS_LENGTH',
+const ErrParamTooLong = new APIError('Paramether is too long', {
+  translation_key: 'PARAM_LENGTH',
   status: 400
 })
 
 module.exports = {
   APIError,
   ErrNotFound,
-  ErrInvalidParams,
-  ErrParamsTooLong
+  ErrMissingParam,
+  ErrParamTooLong
 }
